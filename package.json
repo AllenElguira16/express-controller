@@ -4,6 +4,8 @@
   "repository": "https://github.com/AllenKunn16/express-controller",
   "author": "Michael Allen Elguira <AllenElguira16@gmail.com>",
   "license": "MIT",
+  "main": "dist/index.js",
+  "types": "",
   "files": ["dist/**/*"],
   "scripts": {
     "build": "npx tsc"
