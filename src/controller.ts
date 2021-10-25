@@ -1,7 +1,7 @@
 import Express from "express";
 import path from "path";
 import fs from 'fs';
-import ResponseError from "./response-error";
+import {ResponseError} from "./response-error";
 
 const router = Express.Router();
 
@@ -12,7 +12,7 @@ const router = Express.Router();
  * 
  * @author Michael Allen Elguira <michael01@simplexi.com.ph>
  */
-const registerController = (controllerDirectory: string) => {
+export const registerController = (controllerDirectory: string) => {
   const controllerFilenames = getFilenames(controllerDirectory);
 
   controllerFilenames.forEach((controllerFilename: string) => {
@@ -76,5 +76,3 @@ function getFilenames(sRootDirectory: string) {
 
   return files;
 }
-
-export default registerController;

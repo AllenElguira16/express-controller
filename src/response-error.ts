@@ -3,7 +3,7 @@
  * 
  * @author Michael Allen Elguira <michael01@simplexi.com.ph>
  */
-class ResponseError extends Error {
+export class ResponseError extends Error {
   public code: number;
 
   constructor(code: number, message: string) {
@@ -12,5 +12,3 @@ class ResponseError extends Error {
     this.code = code;
   }
 }
-
-export default ResponseError;
