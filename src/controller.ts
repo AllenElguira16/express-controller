@@ -42,9 +42,7 @@ export const registerController = (controllerDirectory: string) => {
             response.status(500).json({
               success: false,
               status: 500,
-              content: {
-                ...error
-              }
+              content: error
             });
           }
         }
