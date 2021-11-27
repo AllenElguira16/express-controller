@@ -20,13 +20,10 @@ export const registerController = (controllerDirectory: string) => {
     const [filename] = controllerFilename.split('.');
     const handler = require(path.join(controllerDirectory, controllerFilename));
 
-    console.log(filename);
     const uri = '/' + filename
       .replace('\\index', '')
       .replace(/\[([\w\-. ])+\]/gm, (sMatchedString) => ':' + sMatchedString.slice(1, -1))
       .replace(/\\/, '\/');
-
-    console.log(uri);
 
     Object.keys(handler).forEach((method: string) => {
       type TExpressMethods = 'get'|'post'|'put'|'delete';
