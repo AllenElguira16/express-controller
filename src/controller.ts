@@ -26,6 +26,8 @@ export const registerController = (controllerDirectory: string) => {
       .replace(/\\/, '\/')
       .replace('/index', '');
 
+    console.log(uri);
+
     Object.keys(handler).forEach((method: string) => {
       type TExpressMethods = 'get'|'post'|'put'|'delete';
       
