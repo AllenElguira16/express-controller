@@ -20,6 +20,7 @@ export const registerController = (controllerDirectory: string) => {
     const [filename] = controllerFilename.split('.');
     const handler = require(path.join(controllerDirectory, controllerFilename));
 
+    console.log(filename);
     const uri = '/' + filename
       .replace(/\[([\w\-. ])+\]/gm, (sMatchedString) => ':' + sMatchedString.slice(1, -1))
       .replace(/\\/, '\/')
