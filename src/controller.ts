@@ -22,9 +22,9 @@ export const registerController = (controllerDirectory: string) => {
 
     console.log(filename);
     const uri = '/' + filename
+      .replace('\\index', '')
       .replace(/\[([\w\-. ])+\]/gm, (sMatchedString) => ':' + sMatchedString.slice(1, -1))
-      .replace(/\\/, '\/')
-      .replace('/index', '');
+      .replace(/\\/, '\/');
 
     console.log(uri);
 
